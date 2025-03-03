@@ -25,11 +25,26 @@
 ## Runtime Data Area 이하 RDA
 RDA는 JVM의 메모리 영역이며 자바 애플리케이션을 실행할 때 사용되는 데이터들을 적재하는 영역이다.
 * Method 영역: 정적 필드와 클래스 구조가 담기는 영역
+  * static
+  * static final => 이 친구는 메서드 영역의 상수 풀에 저장이 된다.
+  * 클래스 정보
+    * ![classInfo](../../image/classinfo.png)
+    * 생성자의 Byte 코드
 * Heap 영역: JVM이 관리하는 프로그램 상에서 데이터를 저장하기 위해 런타임 시 동적으로 할당하여 사용하는 영역
   * 여기서 생성된 객체들은 다른 객체의 필드에서 참조되는 용이다. => <span style="color: #008000">참조하는 주체가 없으면 GC의 대상<span>
   ![heap](../../image/heap.png)
+  ![heapInstance](../../image/heapInstance.png)
+  * new 실행 시 클래스의 객체가 heap에 저장된다.
+    * 이 객체 안에는 필드가 저장된다.
 * Stack 영역: 기본 자료형을 생성할 때 저장하는 공간으로, 임시적으로 사용되는 변수들이나 정보들이 저장되는 영역
   * 스택 영역은 각 스레드마다 하나씩 존재하며, 스레드가 시작될 때 할당된다.
+  ![stackFlow](../../image/stackFlow.png)
+  1. main() 메서드 실행 시 main 스택 프레임 생성
+  2. createBread()가 호출되면서 createBread 스택 프레임 생성
+  3. createBread에서 new가 실행되면서 Heap에 Bread 객체 생성
+  4. createBread 종료 시 createBread 스택 프레임 제거
+     * 생성된 객체는 main에서 muffin으로 참조 => 객체 유지
+  5. main()이 종료되면 main 스택 프레임이 제거되고, 참조 주체가 없으므로 객체도 GC의 대상이 된다.
 * PC Register: 스레드가 시작될 때 생성되며, 현재 수행중인 JVM 명령어 주소를 저장하는 영역 
 => <span style="color: #008000">현재 작업하는 내용을 CPU에게 연산으로 제공하며 PCR은 이를 위한 버퍼 공간<span>
 * Native Method Stack: Native 코드가 실행되는 영역
