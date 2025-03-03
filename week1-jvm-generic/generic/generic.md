@@ -203,7 +203,9 @@ class UserRepository implements Repository<String> {
  | `Predicate<T>` | `boolean test(T t)` | `T`를 받아서 `true/false` 반환 |
 
 
-아래는 `Predicate<T>` 를 사용하여 서비스 레이어에서 동적 필터링 하는 경우를 보여주는 예시
+- `Predicate<T>` 를 사용하여 서비스 레이어에서 동적 필터링을 할 수 있다.
+- 우리가 Stream에서 사용하는 filter 내부가 `Predicate<T>` 로 추상화되어 있다. 보통 개발할 때는 람다 표현식을 직접 전달하여 `Predicate`를 암시적으로 사용한다.
+- 아래 코드는 구체적으로 `Predicate`를 명시해주는 방식의 코드 예제이다.
 
 
 ```java
@@ -319,3 +321,10 @@ class FruitBox<T> {
     - 와일드카드와 함께, 특정 부모 타입을 제한하는 용도로 쓰인다.
     - **`? super Integer`**
         - `Integer`의 부모 타입(`Number`, `Object` 등)도 허용한다.
+
+
+
+---
+ref.
+- [Java Generics: Concept & Syntax](https://inpa.tistory.com/entry/JAVA-%E2%98%95-%EC%A0%9C%EB%84%A4%EB%A6%ADGenerics-%EA%B0%9C%EB%85%90-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%B3%B5%ED%95%98%EA%B8%B0#%EC%A0%9C%EB%84%A4%EB%A6%AD_%EA%B0%9D%EC%B2%B4_%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0)
+- [Java 8: Stream Filter (w. Predicate)](https://rudaks.tistory.com/entry/Java-8-Stream%EC%97%90%EC%84%9C-filter%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%8B%A4%EC%96%91%ED%95%9C-Predicate)
