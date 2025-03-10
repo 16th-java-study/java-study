@@ -61,3 +61,11 @@ public class GuiViewer {
 - 파사드 패턴으로, 클라이언트와 SubSystem 간의 결합을 제거한다. (SubSystem의 직접적인 사용을 하지 않게 추상화하기 때문)
 - 파사드를 통해 SubSystem의 상세한 구현을 캡슐화한다. (만약, 내부 로직이 변경되더라도 밖에 주는 영향이 적다.)
 - 다수의 클라이언트에 공통된 기능은 파사드를 통해서 쉽게 사용할 수 있도록 하고, 보다 세밀한 제어가 필요한 경우에는 서브 시스템에 직접 접근하는 방식도 선택할 수 있다.
+
+
+---
+
+
+ref.
+- [facade-pattern-1](https://incheol-jung.gitbook.io/docs/study/undefined/undefined-2/undefined-7)
+- [facade-pattern-2](https://inpa.tistory.com/entry/GOF-%F0%9F%92%A0-%ED%8D%BC%EC%82%AC%EB%93%9CFacade-%ED%8C%A8%ED%84%B4-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EB%B0%B0%EC%9B%8C%EB%B3%B4%EC%9E%90)

@@ -78,3 +78,8 @@ public class EasyStageEnemyFactory extends EnemyFactory {
 | **포커스** | **메서드 레벨에서 객체 생성을 추상화** | **클래스(팩토리) 레벨에서 객체 생성을 추상화** |
 
 
+---
+
+ref.
+- [abstract-factory-pattern-1](https://incheol-jung.gitbook.io/docs/study/undefined/undefined-2/undefined-8)
+- [abstract-factory-pattern-2](https://inpa.tistory.com/entry/GOF-%F0%9F%92%A0-%EC%B6%94%EC%83%81-%ED%8C%A9%ED%86%A0%EB%A6%ACAbstract-Factory-%ED%8C%A8%ED%84%B4-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EB%B0%B0%EC%9B%8C%EB%B3%B4%EC%9E%90)
