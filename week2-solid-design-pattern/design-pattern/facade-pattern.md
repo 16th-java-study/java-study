@@ -32,10 +32,11 @@
 - 따라서 이들 Dao 들의 인터페이스에 일부 변화가 발생하면 이 Dao를 직접적으로 사용하고 있는 나머지 GUIViewer, XMLExporter, ExcelExporter에 모두 영향을 미치게 된다.
 
 
-![img1](../image/KangJinJu/facade1.png)
+<img src="../image/KangJinJu/facade1.png" alt="img1" width="600">
 
 
-![img2](../image/KangJinJu/facade2.png)
+<img src="../image/KangJinJu/facade2.png" alt="img2" width="600">
+
 
 
 ## 해결방법

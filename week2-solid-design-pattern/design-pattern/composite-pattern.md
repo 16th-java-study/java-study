@@ -6,7 +6,7 @@
   - 반면 파일은 단일 객체 이기 때문에 이를 Leaf 객체라고 한다. (Leaf는 자식이 없음)
 
 
-![img1](../image/KangJinJu/composite1.png)
+<img src="../image/KangJinJu/composite1.png" alt="img1" width="600">
 
 
 ## 장점
