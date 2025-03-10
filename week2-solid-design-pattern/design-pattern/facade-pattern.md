@@ -31,6 +31,13 @@
 - 중복 로직에서 미세한 차이가 발생하면 이후 개발자가 변경해야 할 때 미세한 차이점을 누락할 가능성이 높아짐
 - 따라서 이들 Dao 들의 인터페이스에 일부 변화가 발생하면 이 Dao를 직접적으로 사용하고 있는 나머지 GUIViewer, XMLExporter, ExcelExporter에 모두 영향을 미치게 된다.
 
+
+![img1](../image/KangJinJu/facade1.png)
+
+
+![img2](../image/KangJinJu/facade2.png)
+
+
 ## 해결방법
 - 코드 중복과 직접적인 의존을 해결하는데에 파사드 패턴을 사용할 수 있다.
 - SubSystem을 감춰 주는 상위 수준의 인터페이스를 제공하여 해당 문제를 해결한다.
