@@ -9,8 +9,6 @@
 - Abstract Class: `extends` 키워드 → 자신의 기능들을 하위, 자식 클래스로 “확장” 시킨다. (기존에 부모가 가진 기능을 자식에서 확장한다)
 
 
----
-
 ## 추상 클래스를 사용하는 경우
 ### 중복 멤버 통합
 - 중복되는 멤버를 상위 클래스로 묶어서 통합해줄 수 있다.
@@ -18,7 +16,7 @@
 - 해당 중복 멤버들을 계속 확장해서 사용하는게 필요할 때 사용할 수 있다.
 
 
-![img1](/image/KangJinJu/abstract-class.png)
+![img1](./image/KangJinJu/abstract-class.png)
 
 ### 추상 클래스의 다형성
 - 인터페이스나 추상클래스 모두 다형성을 이용할수 있지만, 추상클래스를 통한 다형성에는 추가적인 의미가 있다.
@@ -40,7 +38,7 @@
 - 상속에 얽매히지 않는 인터페이스에 추상 메소드를 선언하고, 이를 구현(implements) 하면서 자유로운 타입 묶음을 통해 추상화를 이룬다.
 
 
-![img2](/image/KangJinJu/interface.png)
+![img2](./image/KangJinJu/interface.png)
 
 - 다중 상속이 필요할 때
 
