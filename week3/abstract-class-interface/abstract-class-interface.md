@@ -16,7 +16,7 @@
 - 해당 중복 멤버들을 계속 확장해서 사용하는게 필요할 때 사용할 수 있다.
 
 
-![img1](./image/KangJinJu/abstract-class.png)
+<img src="../image/KangJinJu/abstract-class.png" alt="img1" width="500">
 
 ### 추상 클래스의 다형성
 - 인터페이스나 추상클래스 모두 다형성을 이용할수 있지만, 추상클래스를 통한 다형성에는 추가적인 의미가 있다.
@@ -37,8 +37,7 @@
 
 - 상속에 얽매히지 않는 인터페이스에 추상 메소드를 선언하고, 이를 구현(implements) 하면서 자유로운 타입 묶음을 통해 추상화를 이룬다.
 
-
-![img2](./image/KangJinJu/interface.png)
+<img src="../image/KangJinJu/interface.png" alt="img1" width="800">
 
 - 다중 상속이 필요할 때
 
@@ -56,7 +55,6 @@
 | **다중 상속 여부** | ❌ 불가능 (단일 상속만 가능) | ✅ 가능 (여러 개 구현 가능) |
 | **필드 사용**     | ✅ 인스턴스 변수 가능 (`protected`, `private`) | ❌ 필드 사용 불가 (`static final`만 가능) |
 | **접근 제어자**   | ✅ `public`, `protected`, `private` 모두 사용 가능 | ❌ `public`만 가능 |
-| **메서드 구현**   | ✅ 일부 구현 가능 (추상 + 일반 메서드 포함) | ❌ 완전한 추상 메서드만 (Java 8부터는 `default`, `static` 가능) |
 | **사용 목적**     | 공통 기능 확장 (**is-a 관계**) | 공통 규약 정의 (**can-do 관계**) |
 
 
