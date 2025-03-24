@@ -15,7 +15,7 @@
 
 이러한 문제를 해결하기 위해 자바 1.5부터는 `Lock` 인터페이스를 제공한다. `Lock`을 사용하면 임계 영역을 더욱 안전하게 관리할 수 있으며, 대표적인 구현체로 `ReentrantLock`이 있다. 최근 자바 버전에서 `synchronized`와 `ReentrantLock` 간의 성능 차이는 거의 없지만, 락 획득 타임아웃이나 인터럽트 가능성, 공정성 모드와 같은 세부적인 제어가 필요한 경우에는 `ReentrantLock`을 사용하는 것이 좋다.
 
-![reentrantlock.png](reentrantlock.png)
+![reentrantlock.png](image/KimJiMin/reentrantlock.png)
 
 `ReentrantLock`은 내부적으로 락과 대기 큐를 사용해 임계 영역을 관리한다. 또한 하나의 스레드가 이미 락을 획득한 상태에서 다시 같은 락을 중첩해서 획득할 수 있다. 스레드가 재진입할 때마다 내부의 카운트가 증가하고, `unlock()`을 호출할 때마다 카운트를 감소시켜 카운트가 0이 되면 락을 완전히 해제한다.
 
